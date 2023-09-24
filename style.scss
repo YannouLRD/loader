@@ -1,10 +1,14 @@
 $cd-bars: #15DEA5;
+$cd-bars-inv: #0E397F;
 $size: 3vh;
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / 5;
 
 .container {
     display: flex;
-    justify-content: center;
-    margin-top: 20rem;
+    flex-direction: column;
+    margin-left: 30rem;
+    margin-top: 13rem;
 }
 .load {
     width: $size*10;
@@ -15,5 +19,60 @@ $size: 3vh;
         background-color: $cd-bars;
         height: 100%;
         width: $size;
+        animation: bars $anim-dur backwards infinite ease-in-out alternate;
+        @for $i from 1 through 5 {
+            &--#{$i} {
+                animation-delay: $anim-delay * $i;
+            }
+            &--#{$i}-inv {
+                animation-delay: $anim-delay * $i + random(100)*15ms;
+                animation-direction: alternate-reverse;
+                animation-fill-mode: forwards;
+                background-color: $cd-bars-inv;
+            }
+        }
+    }
+}
+.load__bar--1 {
+    animation-delay: 200ms;
+}
+.load__bar--1-inv {
+    animation-delay: 200ms;
+    background: $cd-bars-inv;
+}
+.load__bar--2 {
+    animation-delay: 400ms;
+}
+.load__bar--2-inv {
+    animation-delay: 400ms;
+    background: $cd-bars-inv;
+}
+.load__bar--3 {
+    animation-delay: 600ms;
+}
+.load__bar--3-inv {
+    animation-delay: 600ms;
+    background: $cd-bars-inv;
+}
+.load__bar--4 {
+    animation-delay: 800ms;
+}
+.load__bar--4-inv {
+    animation-delay: 800ms;
+    background: $cd-bars-inv;
+}
+.load__bar--5 {
+    animation-delay: 1000ms;
+}
+.load__bar--5-inv {
+    animation-delay: 1000ms;
+    background: $cd-bars-inv;
+}
+@keyframes bars {
+    0% {
+        transform: scaleY(0.5);
+    }
+    100% {
+        transform: scaleY(1);
     }
 }

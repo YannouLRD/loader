@@ -1,7 +1,8 @@
 .container {
   display: flex;
-  justify-content: center;
-  margin-top: 20rem;
+  flex-direction: column;
+  margin-left: 30rem;
+  margin-top: 13rem;
 }
 
 .load {
@@ -14,4 +15,104 @@
   background-color: #15DEA5;
   height: 100%;
   width: 3vh;
+  animation: bars 1000ms backwards infinite ease-in-out alternate;
+}
+.load__bar--1 {
+  animation-delay: 200ms;
+}
+.load__bar--1-inv {
+  animation-delay: 1670ms;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+  background-color: #0E397F;
+}
+.load__bar--2 {
+  animation-delay: 400ms;
+}
+.load__bar--2-inv {
+  animation-delay: 730ms;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+  background-color: #0E397F;
+}
+.load__bar--3 {
+  animation-delay: 600ms;
+}
+.load__bar--3-inv {
+  animation-delay: 915ms;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+  background-color: #0E397F;
+}
+.load__bar--4 {
+  animation-delay: 800ms;
+}
+.load__bar--4-inv {
+  animation-delay: 950ms;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+  background-color: #0E397F;
+}
+.load__bar--5 {
+  animation-delay: 1000ms;
+}
+.load__bar--5-inv {
+  animation-delay: 1390ms;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+  background-color: #0E397F;
+}
+
+.load__bar--1 {
+  animation-delay: 200ms;
+}
+
+.load__bar--1-inv {
+  animation-delay: 200ms;
+  background: #0E397F;
+}
+
+.load__bar--2 {
+  animation-delay: 400ms;
+}
+
+.load__bar--2-inv {
+  animation-delay: 400ms;
+  background: #0E397F;
+}
+
+.load__bar--3 {
+  animation-delay: 600ms;
+}
+
+.load__bar--3-inv {
+  animation-delay: 600ms;
+  background: #0E397F;
+}
+
+.load__bar--4 {
+  animation-delay: 800ms;
+}
+
+.load__bar--4-inv {
+  animation-delay: 800ms;
+  background: #0E397F;
+}
+
+.load__bar--5 {
+  animation-delay: 1000ms;
+}
+
+.load__bar--5-inv {
+  animation-delay: 1000ms;
+  background: #0E397F;
+}
+
+@keyframes bars {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }/*# sourceMappingURL=style.css.map */
